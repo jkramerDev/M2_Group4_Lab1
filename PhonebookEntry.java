@@ -32,4 +32,19 @@ class PhonebookEntry{
 		this.type = type;
 	}
 
+
+
+
+	public boolean equals(Object obj) {
+		if (obj == this)
+			return true;
+		if (!(obj instanceof PhonebookEntry))
+			return false;
+
+		PhonebookEntry phonebookentry = (PhonebookEntry) obj;
+
+		return phonebookentry.getPhoneNumber() == this.getPhoneNumber()
+				&& phonebookentry.getType() == this.getType();
+	}
+
 }
